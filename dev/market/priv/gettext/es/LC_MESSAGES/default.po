@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Language: es\n"
+
+##common
+msgid "back"
+msgstr "Regresar"
+
+msgid "save"
+msgstr "Guardar"
+
+
+## User
+msgid "new_user"
+msgstr "Nuevo usuario"
+
+msgid "name"
+msgstr "nombre"
+
+msgid "username"
+msgstr "nombre de usuario"
+
+msgid "password"
+msgstr "contraseña"
+
