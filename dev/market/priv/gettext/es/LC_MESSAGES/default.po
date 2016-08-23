@@ -2,6 +2,15 @@ msgid ""
 msgstr ""
 "Language: es\n"
 
+#: web/views/page_view.ex:2
+msgid "Welcome to %{name}"
+msgstr "Bonvenon al %{name}!"
+
+#: web/views/page_view.ex:3
+msgid "Now using Gettext!"
+msgstr "Nun uzante Gettext!"
+
+
 ##common
 msgid "back"
 msgstr "Regresar"
@@ -9,9 +18,14 @@ msgstr "Regresar"
 msgid "save"
 msgstr "Guardar"
 
+msgid "home"
+msgstr "Inicio"
 
 ## User
-msgid "new_user"
+msgid "users"
+msgstr "usuarios"
+
+msgid "new user"
 msgstr "Nuevo usuario"
 
 msgid "name"
@@ -22,4 +36,3 @@ msgstr "nombre de usuario"
 
 msgid "password"
 msgstr "contraseña"
-

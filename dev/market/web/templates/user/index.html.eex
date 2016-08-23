@@ -1,12 +1,12 @@
 <%= render Market.BreadcrumbleView, "breadcrumb.html", breadcrumb_trails: @breadcrumb_trails, breadcrumb: @breadcrumb %>
-<h2>Listing users</h2>
-
+<div align="right">
+<%= link Gettext.gettext(Market.Gettext, "new user"), to: user_path(@conn, :new), class: "btn btn-primary btn-xs" %>
+</div>
 <table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Username</th>
-      <th>Password hash</th>
+      <th><%= Gettext.gettext(Market.Gettext, "name") %></th>
+      <th><%= Gettext.gettext(Market.Gettext, "username") %></th>
 
       <th></th>
     </tr>
@@ -16,7 +16,6 @@
     <tr>
       <td><%= user.name %></td>
       <td><%= user.username %></td>
-      <td><%= user.password_hash %></td>
 
       <td class="text-right">
         <%= link "Show", to: user_path(@conn, :show, user), class: "btn btn-default btn-xs" %>
@@ -28,4 +27,4 @@
   </tbody>
 </table>
 
-<%= link "New user", to: user_path(@conn, :new) %>
+
