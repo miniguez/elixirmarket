@@ -36,6 +36,8 @@ defmodule Market.Web do
 
       import Market.Router.Helpers
       import Market.Gettext
+
+      use Breadcrumble
     end
   end
 

@@ -1,8 +1,6 @@
 <% Gettext.put_locale Market.Gettext, "es" %>
-
+<%= render Market.BreadcrumbleView, "breadcrumb.html", breadcrumb_trails: @breadcrumb_trails, breadcrumb: @breadcrumb %>
 <h2><%= Gettext.gettext(Market.Gettext, "new_user") %></h2>
-
-<%= link "Back", to: user_path(@conn, :index) %>
-
 <%= render "form.html", changeset: @changeset, action: user_path(@conn, :create) %>
+
 

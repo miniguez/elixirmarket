@@ -4,15 +4,19 @@ defmodule Market.UserController do
   alias Market.User
 
   plug :scrub_params, "user" when action in [:create, :update]
+  plug :add_breadcrumb, name: 'home', url: '/'
 
   def index(conn, _params) do
+    breadcrumb= [[name: 'users']]
+
     users = Repo.all(User)
-    render(conn, "index.html", users: users)
+    render(conn, "index.html", users: users, breadcrumb: breadcrumb)
   end
 
   def new(conn, _params) do
+    breadcrumb= [[name: 'users', url: "/users"],[name: 'new']]
     changeset = User.changeset(%User{})
-    render(conn, "new.html", changeset: changeset)
+    render(conn, "new.html", changeset: changeset, breadcrumb: breadcrumb)
   end
 
   def create(conn, %{"user" => user_params}) do
